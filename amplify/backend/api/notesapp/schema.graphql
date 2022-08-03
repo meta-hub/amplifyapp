@@ -3,10 +3,10 @@ type Note @model @auth(rules: [{ allow: public, operations: [create, delete, upd
   name: String!
   description: String
 }
-type ModelNoteConnection @model @auth(rules: [{ allow: public, operations: [list, listNotes] }] ) {
+type ModelNoteConnection @model @auth(rules: [{ allow: public, operations: [list] }] ) {
   id: ID!
   name: String!
   description: String!
-  createdAt: Date!
-  updatedAt: Date
+  createdAt: String!
+  updatedAt: String
 }

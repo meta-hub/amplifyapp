@@ -19,6 +19,36 @@ export const listNotes = /* GraphQL */ `
     $nextToken: String
   ) {
     listNotes(filter: $filter, limit: $limit, nextToken: $nextToken) {
+      id
+      name
+      description
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const getModelNoteConnection = /* GraphQL */ `
+  query GetModelNoteConnection($id: ID!) {
+    getModelNoteConnection(id: $id) {
+      id
+      name
+      description
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const listModelNoteConnections = /* GraphQL */ `
+  query ListModelNoteConnections(
+    $filter: ModelModelNoteConnectionFilterInput
+    $limit: Int
+    $nextToken: String
+  ) {
+    listModelNoteConnections(
+      filter: $filter
+      limit: $limit
+      nextToken: $nextToken
+    ) {
       items {
         id
         name

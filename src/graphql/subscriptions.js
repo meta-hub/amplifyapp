@@ -34,3 +34,42 @@ export const onDeleteNote = /* GraphQL */ `
     }
   }
 `;
+export const onCreateModelNoteConnection = /* GraphQL */ `
+  subscription OnCreateModelNoteConnection(
+    $filter: ModelSubscriptionModelNoteConnectionFilterInput
+  ) {
+    onCreateModelNoteConnection(filter: $filter) {
+      id
+      name
+      description
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const onUpdateModelNoteConnection = /* GraphQL */ `
+  subscription OnUpdateModelNoteConnection(
+    $filter: ModelSubscriptionModelNoteConnectionFilterInput
+  ) {
+    onUpdateModelNoteConnection(filter: $filter) {
+      id
+      name
+      description
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const onDeleteModelNoteConnection = /* GraphQL */ `
+  subscription OnDeleteModelNoteConnection(
+    $filter: ModelSubscriptionModelNoteConnectionFilterInput
+  ) {
+    onDeleteModelNoteConnection(filter: $filter) {
+      id
+      name
+      description
+      createdAt
+      updatedAt
+    }
+  }
+`;

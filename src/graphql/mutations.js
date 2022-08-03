@@ -43,3 +43,45 @@ export const deleteNote = /* GraphQL */ `
     }
   }
 `;
+export const createModelNoteConnection = /* GraphQL */ `
+  mutation CreateModelNoteConnection(
+    $input: CreateModelNoteConnectionInput!
+    $condition: ModelModelNoteConnectionConditionInput
+  ) {
+    createModelNoteConnection(input: $input, condition: $condition) {
+      id
+      name
+      description
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const updateModelNoteConnection = /* GraphQL */ `
+  mutation UpdateModelNoteConnection(
+    $input: UpdateModelNoteConnectionInput!
+    $condition: ModelModelNoteConnectionConditionInput
+  ) {
+    updateModelNoteConnection(input: $input, condition: $condition) {
+      id
+      name
+      description
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const deleteModelNoteConnection = /* GraphQL */ `
+  mutation DeleteModelNoteConnection(
+    $input: DeleteModelNoteConnectionInput!
+    $condition: ModelModelNoteConnectionConditionInput
+  ) {
+    deleteModelNoteConnection(input: $input, condition: $condition) {
+      id
+      name
+      description
+      createdAt
+      updatedAt
+    }
+  }
+`;

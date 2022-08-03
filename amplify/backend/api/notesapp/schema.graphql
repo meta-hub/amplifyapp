@@ -8,5 +8,5 @@ type ModelNoteConnection @model @auth(rules: [{ allow: public, operations: [list
   name: String!
   description: String!
   createdAt: Date!
-  updatedAt Date
+  updatedAt: Date
 }
